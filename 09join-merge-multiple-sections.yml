@@ -1,0 +1,40 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 60s
+    config:
+      name: mergeJoinSample
+
+      apis:
+        - event_type: primaryEvent
+          url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/join-merge-sample1.json
+          start_key:
+            - usageInfo
+
+          # merge: customCostInfo
+          # join_key: meterId,customerId
+          # prefix: AA
+
+        - event_type: priceList
+          url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/join-merge-sample1.json
+          start_key:
+            - priceList
+
+          # merge: customCostInfo
+          # join_key: meterId
+          # prefix: BB
+
+        - event_type: customerDetails
+          cache: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/join-merge-sample1.json
+          start_key:
+            - customerDetails
+
+          # merge: customCostInfo
+          # join_key: customerId
+          # prefix: CC
+################
+#### Note ######
+# - cache
+# - merge, join
+# - prefix
+################
