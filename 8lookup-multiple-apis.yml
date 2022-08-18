@@ -1,0 +1,70 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+
+    config:
+      name: pingFlex
+      global:
+        base_url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/
+        tls_config:
+          insecure_skip_verify: true
+        headers:
+          key: "abc123"
+        # proxy: http://abc:123@1.1.1.1
+
+      secrets:
+        mylogin:
+          kind: local # Use Flex local/internal decryption function
+          key: N3wR3lic! # Your pass_phrase to encrypt/decrypt the Salesforce login info
+          data: 7a8e8d41b493747519e271e07c128c008ae765121e5ef1f6cf6668348afc6a863a3ecd4d134bd61bc7fcdf4540c62921d282e115aefe78e3bc67fc717a
+          type: equal
+
+      variable_store:
+        startDatetime: ${timestamp:datetimeutc-5min}
+        username: ${secret.mylogin:username}
+        password: ${secret.mylogin:password}
+
+      apis:
+        - name: getURLs
+          event_type: lab8
+          url: ping-lookup-sample1.json
+          debug: true
+
+        # - name: ping
+        #  #run_async: true
+        #   # async_rate: 2
+        #   commands:
+        #     - run: ping -c 5 ${lookup.urlSample:target}
+        #       timeout: 60000
+        #       split_output: statistics ---
+        #       regex_matches:
+        #         - expression: ([0-9]+\.?[0-9]+)\/([0-9]+\.?[0-9]+)\/([0-9]+\.?[0-9]+)\/([0-9]+\.?[0-9]+)
+        #           keys: [min, avg, max, stddev]
+
+        #   custom_attributes:
+        #     url: ${lookup.urlSample:target}
+        #     time: ${var:startDatetime}
+        #     user: ${secret.mylogin:username}
+        #     pass: ${secret.mylogin:password}
+        #     time_delta: ${timestamp:s}
+
+        #   metric_parser:
+        #     metrics:
+        #       time_delta: DELTA
+        #     namespace: # you can create a namespace with a custom attribute, or chain together existing attributes, else it will default
+        #       # custom_attr: "mySpecialRedisServer"
+        #       existing_attr:
+        #         - url
+################
+#### Note ######
+# - global
+# - secret
+# - variable_store
+# - timestamp
+# - lookup
+# - run_async
+# - async_rate
+# - metric_parser
+# - DELTA
+################

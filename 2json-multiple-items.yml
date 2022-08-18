@@ -1,0 +1,25 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+    config:
+      name: todos
+      apis:
+        - name: toDoSample
+          event_type: lab2
+          url: https://jsonplaceholder.typicode.com/todos
+
+          # sample_include_filter:
+          #   - completed: "true"
+
+          # sample_exclude_filter:
+          #   - userI: 10|1|9
+
+          # math:
+          #   NEWID: ${id} * 100
+################
+#### Note ######
+# - sample_include_filter
+# - sample_exclude_filter
+# - math
+################

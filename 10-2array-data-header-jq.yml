@@ -1,0 +1,27 @@
+# @format
+---
+integrations:
+  - name: nri-flex
+    interval: 60s
+    config:
+      name: lb
+      apis:
+        - name: lb
+          event_type: lab102
+          url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/jq-simple-array-sample1.json
+          jq: >-
+            .[]
+            |[.results[].schema[].name] as $header 
+            |[.results[].data[]] 
+            |map([.,$header]
+                  |transpose
+                  |map({(.[1]):.[0]})
+                  |add
+              )
+
+################
+#### Note ######
+# - .[]
+# - jq
+#
+################

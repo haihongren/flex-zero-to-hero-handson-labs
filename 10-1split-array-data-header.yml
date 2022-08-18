@@ -1,0 +1,36 @@
+# @format
+---
+integrations:
+  - name: nri-flex
+    interval: 60s
+    config:
+      name: lb
+      apis:
+        - name: lb
+          event_type: lab101
+          url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/jq-simple-array-sample1.json
+          # split_array: true
+          # set_header:
+          #   [
+          #     TIMESTAMP,
+          #     HOST_ID,
+          #     HOSTNAME,
+          #     SERVER_RAM,
+          #     JAVAUSED,
+          #     JAVAUNUSED,
+          #     TUPLEDATA,
+          #     TUPLEALLOCATED,
+          #     INDEXMEMORY,
+          #     STRINGMEMORY,
+          #     TUPLECOUNT,
+          #     POOLEDMEMORY,
+          #     PHYSICALMEMORY,
+          #     JAVAMAXHEAP,
+          #   ]
+          # start_key:
+          #   - results>data
+################
+#### Note ######
+# - split_array
+# - set_header
+################

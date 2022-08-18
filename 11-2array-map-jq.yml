@@ -1,0 +1,29 @@
+# @format
+---
+integrations:
+  - name: nri-flex
+    interval: 60s
+    config:
+      name: lb
+      apis:
+        - name: lb
+          event_type: lab112
+          url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/array-map-sample1.json
+          # jq: >-
+          #   .[]|{intent_path:.intent_path}+.results[]|
+          #       [
+          #         {  pool_path:.pool_path,
+          #            lb_status:.status,
+          #            enforcement_point_path:.enforcement_point_path,
+          #            resource_type:.resource_type,
+          #            intent_path: .intent_path
+          #         }
+          #        +.members[]
+          #        ]
+
+################
+#### Note ######
+# - .[]
+# - jq
+#
+################
