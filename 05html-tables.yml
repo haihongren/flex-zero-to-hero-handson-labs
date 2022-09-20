@@ -17,7 +17,7 @@ integrations:
           # keep_keys:
           #   - Index
           #   - Name
-          #   - Earnings
+          #   - Expenditure
 ################
 #### Note ######
 # - parse_html
