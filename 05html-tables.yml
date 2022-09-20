@@ -13,7 +13,6 @@ integrations:
 
           # sample_include_match_all_filter:
           #   - Index: "^1"
-          #   - width: "100%"
 
           # keep_keys:
           #   - Index
