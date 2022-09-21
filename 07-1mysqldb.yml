@@ -18,7 +18,7 @@ integrations:
               run: Select * from users
 
             # - name: MySQLShowVars
-            #   event_type: msqlvarSample     
+            #   event_type: msqlvarSample  
             #   run: HOW VARIABLES like 'max%'
 
 ################
