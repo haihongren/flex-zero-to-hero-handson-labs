@@ -15,10 +15,12 @@ integrations:
           db_queries:
             - name: userSample
               event_type: userSample
-              run: Select * from users;
+              run: Select * from users
 
             # - name: MySQLShowVars
-            #   run: SHOW VARIABLES;
+            #   event_type: msqlvarSample     
+            #   run: HOW VARIABLES like 'max%'
+
 ################
 #### Note ######
 # - database
