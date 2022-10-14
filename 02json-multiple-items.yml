@@ -13,7 +13,7 @@ integrations:
           #   - completed: "true"
 
           # sample_exclude_filter:
-          #   - userI: 10|1|9
+          #   - userId: 10|1|9
 
           # math:
           #   NEWID: ${id} * 100
