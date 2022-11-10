@@ -18,9 +18,11 @@ integrations:
 
       apis:
         - name: getURLs
-          event_type: lab8
+          event_type: urlSample
           url: ping-lookup-sample1.json
           debug: true
+          # ignore_output: true
+
 
         # - name: ping
         #  #run_async: true
