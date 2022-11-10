@@ -13,17 +13,8 @@ integrations:
           key: "abc123"
         # proxy: http://abc:123@1.1.1.1
 
-      secrets:
-        mylogin:
-          kind: local # Use Flex local/internal decryption function
-          key: N3wR3lic! # Your pass_phrase to encrypt/decrypt the Salesforce login info
-          data: 7a8e8d41b493747519e271e07c128c008ae765121e5ef1f6cf6668348afc6a863a3ecd4d134bd61bc7fcdf4540c62921d282e115aefe78e3bc67fc717a
-          type: equal
-
       variable_store:
         startDatetime: ${timestamp:datetimeutc-5min}
-        username: ${secret.mylogin:username}
-        password: ${secret.mylogin:password}
 
       apis:
         - name: getURLs
@@ -45,8 +36,6 @@ integrations:
         #   custom_attributes:
         #     url: ${lookup.urlSample:target}
         #     time: ${var:startDatetime}
-        #     user: ${secret.mylogin:username}
-        #     pass: ${secret.mylogin:password}
         #     time_delta: ${timestamp:s}
 
         #   metric_parser:
@@ -56,15 +45,3 @@ integrations:
         #       # custom_attr: "mySpecialRedisServer"
         #       existing_attr:
         #         - url
-################
-#### Note ######
-# - global
-# - secret
-# - variable_store
-# - timestamp
-# - lookup
-# - run_async
-# - async_rate
-# - metric_parser
-# - DELTA
-################
