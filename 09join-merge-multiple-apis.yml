@@ -13,7 +13,7 @@ integrations:
 
           # merge: customCostInfo
           # join_key: meterId,customerId
-          # prefix: AA
+          # prefix: usageInfo_
 
         - event_type: priceList
           url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/join-merge-sample1.json
@@ -22,7 +22,7 @@ integrations:
 
           # merge: customCostInfo
           # join_key: meterId
-          # prefix: BB
+          # prefix: priceList_
 
         - event_type: customerDetails
           cache: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/join-merge-sample1.json
@@ -31,10 +31,4 @@ integrations:
 
           # merge: customCostInfo
           # join_key: customerId
-          # prefix: CC
-################
-#### Note ######
-# - cache
-# - merge, join
-# - prefix
-################
+          # prefix: customerDetails_
