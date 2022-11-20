@@ -9,7 +9,14 @@ integrations:
         - name: lb
           event_type: lab101
           url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/jq-simple-array-sample1.json
+
+          # start_key:
+          #   - results>data    
+             
+
           # split_array: true
+
+
           # set_header:
           #   [
           #     TIMESTAMP,
@@ -27,10 +34,3 @@ integrations:
           #     PHYSICALMEMORY,
           #     JAVAMAXHEAP,
           #   ]
-          # start_key:
-          #   - results>data
-################
-#### Note ######
-# - split_array
-# - set_header
-################
