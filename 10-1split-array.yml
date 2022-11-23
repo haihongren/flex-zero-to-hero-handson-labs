@@ -7,7 +7,7 @@ integrations:
       name: lb
       apis:
         - name: lb
-          event_type: lab101
+          event_type: lab10
           url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/split_array_data_sample.json
 
           # split_array: true
