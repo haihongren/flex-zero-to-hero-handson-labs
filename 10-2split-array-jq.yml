@@ -1,0 +1,18 @@
+# @format
+---
+integrations:
+  - name: nri-flex
+    interval: 60s
+    config:
+      name: lb
+      apis:
+        - name: lb
+          event_type: lab101
+          url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/split_array_data_sample.json
+
+          # jq: > 
+          #     .[]|[.columns[].name] as $header |
+          #         [.rows[]] | map(. as $o |
+          #                     reduce .[] as $item 
+          #                     ( {}; ($o|index($item)) as $index |.[$header[$index]]=$item) )
+
