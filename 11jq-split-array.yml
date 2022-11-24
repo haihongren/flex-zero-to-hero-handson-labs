@@ -4,10 +4,10 @@ integrations:
   - name: nri-flex
     interval: 60s
     config:
-      name: lb
+      name: lab11
       apis:
-        - name: lb
-          event_type: lab101
+        - name: lb11
+          event_type: lab11
           url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/split_array_data_sample.json
 
           # jq: > 
