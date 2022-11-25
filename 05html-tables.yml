@@ -18,9 +18,4 @@ integrations:
           #   - Index
           #   - Name
           #   - Expenditure
-################
-#### Note ######
-# - parse_html
-# - sample_include_match_all_filter
-# - keep_keys
-################
+

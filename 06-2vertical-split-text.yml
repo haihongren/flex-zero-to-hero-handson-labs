@@ -13,7 +13,4 @@ integrations:
 
         #   custom_attributes:
         #     CLUSERNAME: AEROSPIKE_Cluster1
-################
-#### Note ######
-# - split_by (vertical)
-################
+

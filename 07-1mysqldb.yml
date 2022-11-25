@@ -6,7 +6,7 @@ integrations:
       name: mysqlDbFlex
       apis:
         - database: mysql
-          event_type: lab7
+          event_type: lab71
           db_conn: weaver:weaverpass@tcp(ec2-3-26-50-20.ap-southeast-2.compute.amazonaws.com:3306)/usersdb
           custom_attributes: # applies to all queries
             weather: sunny
@@ -21,10 +21,4 @@ integrations:
 #               event_type: msqlvarSample  
 #               run: SHOW VARIABLES like 'max%'
 
-################
-#### Note ######
-# - database
-# - db_conn options
-# - custom_attributes
-# - db_queries
-################
+

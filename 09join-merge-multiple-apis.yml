@@ -11,7 +11,7 @@ integrations:
           start_key:
             - usageInfo
 
-          # merge: customCostInfo
+          # merge: lab9
           # join_key: meterId,customerId
           # prefix: usageInfo_
 
@@ -20,7 +20,7 @@ integrations:
           start_key:
             - priceList
 
-          # merge: customCostInfo
+          # merge: lab9
           # join_key: meterId
           # prefix: priceList_
 
@@ -29,6 +29,6 @@ integrations:
           start_key:
             - customerDetails
 
-          # merge: customCostInfo
+          # merge: lab9
           # join_key: customerId
           # prefix: customerDetails_

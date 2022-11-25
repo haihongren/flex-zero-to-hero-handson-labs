@@ -15,12 +15,3 @@ integrations:
 
               # set_header: [dirSizeBytes, dirName]
 
-              
-
-################
-#### Note ######
-# - split (horizontal)
-# - set_header
-# - regex_match
-# - split_by
-################

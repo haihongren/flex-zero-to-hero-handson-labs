@@ -37,11 +37,5 @@ integrations:
 
           # add_attribute:
           #   link: https://some-other-service/nodes/${URI}/${ORGANIZATION_ID}
-################
-#### Note ######
-# - commands
-# - output
-# - timestamp_conversion
-# - rename_keys
-# - value_mapper
-################
+
+

@@ -18,9 +18,4 @@ integrations:
 
           # value_parser:
           #   id: "[0-9]+"
-################
-#### Note ######
-# - custom_attributes
-# - add_attribute
-# - value_parser
-################
+

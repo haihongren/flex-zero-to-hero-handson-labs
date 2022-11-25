@@ -14,10 +14,3 @@ integrations:
           # remove_keys:
           #   - author
           
-          
-################
-#### Note ######
-# - xml attributes
-# - prefix
-# - remove_keys
-################

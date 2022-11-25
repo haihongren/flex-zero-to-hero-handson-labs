@@ -25,6 +25,7 @@ integrations:
 
 
         # - name: ping
+          # event_type: lab8        
           # run_async: true
           # async_rate: 3
           # commands:

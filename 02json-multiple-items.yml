@@ -17,9 +17,5 @@ integrations:
 
           # math:
           #   NEWID: ${id} * 100
-################
-#### Note ######
-# - sample_include_filter
-# - sample_exclude_filter
-# - math
-################
+
+
