@@ -26,8 +26,8 @@ integrations:
 
         # - name: ping
           # event_type: lab8        
-          # run_async: true
-          # async_rate: 3
+          ## run_async: true
+          ## async_rate: 3
           # commands:
           #   - run: ping -c 5 ${lookup.urlSample:target}
           #     timeout: 60000
